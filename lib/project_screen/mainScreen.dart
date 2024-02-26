@@ -1,38 +1,94 @@
-import 'package:app_new/Lab8/A3.dart';
 import 'package:app_new/project_screen/HomePage.dart';
 import 'package:flutter/material.dart';
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+class MainScreen2 extends StatelessWidget {
+  const MainScreen2({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          },
+        ),
+        backgroundColor: Colors.black87,
+        title: Container(
+          padding: const EdgeInsets.all(20),
+          child: const Row(
+            children: [
+              Icon(
+                Icons.add_business_outlined,
+                color: Colors.yellow,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                'EduWave',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      drawer: Container(
+        child: Drawer(
+          backgroundColor: Colors.white,
+          child: Column(
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: const DrawerHeader(
+                  decoration: BoxDecoration(color: Colors.blueGrey),
+                  child: Text(
+                    'Hello There',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+              ),
+              const InkWell(
+                child:  ListTile(
+                  title: Text('login'),
+                  leading: Icon(Icons.login),
+                ),
+              ),
+               InkWell(
+                onTap: (){
+                  // ScaffoldMessenger.of(context).
+                },
+                child: const ListTile(
+                  title: Text('logout'),
+                  leading: Icon(Icons.logout_sharp),
+                ),
+              ),
+              const InkWell(
+                child:  ListTile(
+                  title: Text('info'),
+                  leading: Icon(Icons.info_outline),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
       body: Container(
         color: Colors.black87,
         child: Column(
           children: [
-            Container(
-              padding: const EdgeInsets.all(20),
-              child: const Row(
-                children: [
-                  Icon(
-                    Icons.add_business_outlined,
-                    color: Colors.yellow,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'EduWave',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                ],
-              ),
-            ),
             const Expanded(
               child: Text(''),
             ),

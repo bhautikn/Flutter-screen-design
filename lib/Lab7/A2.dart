@@ -8,7 +8,7 @@ class A2 extends StatefulWidget {
 }
 
 class _A2State extends State<A2> {
-  TextEditingController textData = new TextEditingController();
+  TextEditingController textData = TextEditingController();
   String name = "Your Text goes here...";
 
   @override
@@ -32,7 +32,7 @@ class _A2State extends State<A2> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  this.build(context);
+                  build(context);
                   },
                 child: Text('Press It'),
               )

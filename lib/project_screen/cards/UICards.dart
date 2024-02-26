@@ -1,10 +1,12 @@
 import 'package:app_new/project_screen/DetailCourse.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:math';
 
 class UICards extends StatefulWidget {
-  const UICards({super.key});
+  dynamic couses = [];
+  UICards(obj){
+    couses = obj;
+  }
 
   @override
   State<UICards> createState() => _UICardsState();
@@ -89,56 +91,14 @@ class _UICardsState extends State<UICards> {
     );
   }
 
-  dynamic couses = [
-    {
-      'name': 'Bhautik',
-      'title': 'UI/UX\nFlowChart',
-      'lesson': 'lessons'.length + 1,
-      'bg': Colors.green,
-      'duration': '10h 43min',
-      'prize': 126,
-      'lessons': [
-        {'title': 'Introduction', 'duration': '8 Minutes'},
-        {'title': 'Ideation', 'duration': '23 Minutes'},
-        {'title': 'Idea & Generate', 'duration': '34 Minutes'},
-      ]
-    },
-    {
-      'name': 'Joshef',
-      'title': 'illustration\nWith Figma',
-      'lesson': 'lessons'.length + 1,
-      'bg': Colors.white,
-      'duration': '5h 53min',
-      'prize': 258,
-      'lessons': [
-        {'title': 'Introduction', 'duration': '15 Minutes'},
-        {'title': 'Creation', 'duration': '13 Minutes'},
-        {'title': 'Idea & Generate', 'duration': '37 Minutes'},
-        {'title': 'Idea & ReGenerate', 'duration': '54 Minutes'},
-      ]
-    },
-    {
-      'name': 'john',
-      'title': 'Create\nBasic Design',
-      'lesson': 'lessons'.length + 1,
-      'bg': Colors.redAccent,
-      'duration': '5h 53min',
-      'prize': 258,
-      'lessons': [
-        {'title': 'Introduction', 'duration': '5 Minutes'},
-        {'title': 'Creation Work', 'duration': '32 Minutes'},
-        {'title': 'Idea & Generate', 'duration': '3 Minutes'},
-        {'title': 'Create & Generate', 'duration': '47 Minutes'},
-      ]
-    },
-  ];
+
 
   List<Widget> cardList = [];
 
   @override
   Widget build(BuildContext context) {
-    for (var i = 0; i < couses.length; i++) {
-      cardList.add(getCard(couses[i], context));
+    for (var i = 0; i < widget.couses.length; i++) {
+      cardList.add(getCard(widget.couses[i], context));
     }
     return Column(children: cardList);
   }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:swipe_widget/swipe_widget.dart';
 import 'package:swipe_to/swipe_to.dart';
 
 class DetailCource extends StatelessWidget {
@@ -54,7 +53,7 @@ class DetailCource extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
+      backgroundColor: Colors.black87,
       body: Container(
         padding: const EdgeInsets.all(10),
         child: Stack(

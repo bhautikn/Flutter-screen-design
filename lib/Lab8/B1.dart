@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 class Lab8B1 extends StatefulWidget {
   Lab8B1({super.key});
