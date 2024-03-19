@@ -1,4 +1,4 @@
-import 'package:app_new/ToDo/EditDelete.dart';
+import 'package:app_new/db_CRUD/EditDelete.dart';
 import 'package:flutter/material.dart';
 
 class UserDetailPage extends StatefulWidget {

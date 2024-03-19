@@ -1,0 +1,30 @@
+[
+  {
+    "name": "string",
+    "created": "string",
+    "updated": "string",
+    "unread": "number",
+    "last_message": "string",
+    "status": "string",
+    "history": "boolean",
+    "urlToken": "string",
+    "data": [
+      {
+        "type": "string",
+        "time": "string",
+        "from_or_to": "string",
+        "data": "string",
+        "status": "string",
+        "reply": {
+          "type": "string",
+          "time": "string",
+          "from_or_to": "string",
+          "data": "string",
+          "status": "string"
+        }
+      }
+    ]
+  }
+]
+
+"CREATEk"

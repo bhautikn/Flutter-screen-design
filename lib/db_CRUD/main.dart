@@ -1,6 +1,6 @@
-import 'package:app_new/ToDo/EditDelete.dart';
-import 'package:app_new/ToDo/ListEntryPage.dart';
-import 'package:app_new/ToDo/UserDetailPage.dart';
+import 'package:app_new/db_CRUD/EditDelete.dart';
+import 'package:app_new/db_CRUD/ListEntryPage.dart';
+import 'package:app_new/db_CRUD/UserDetailPage.dart';
 import 'package:app_new/db/dbConnect.dart';
 import 'package:flutter/material.dart';
 
